@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+        //dialog
+        binding.button.setVisibility(View.GONE);
         binding.button.setOnClickListener(view1 -> DialogHelper.sharedInstance().createDialog(MainActivity.this, "MessageTitle", "message", "evet", "hayır"));
     }
 }

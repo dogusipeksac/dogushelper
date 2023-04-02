@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Dogus</string>
     <string name="Close">close</string>
+    <string-array name="countries">
+        <item>AAAAAAAA</item>
+        <item>BBBBBBBB</item>
+        <item>CCCCCCCC</item>
+        <item>DDDDDDDD</item>
+        <item>EEEEEEEE</item>
+        <item>FFFFFFFF</item>
+    </string-array>
 </resources>

@@ -1,6 +1,5 @@
 package com.example.dogus.helper.message;
 
-import android.content.Context;
 import android.view.View;
 
 import com.example.dogus.R;
