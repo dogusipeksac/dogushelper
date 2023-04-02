@@ -12,10 +12,11 @@
         android:theme="@style/Theme.Dogus"
         tools:targetApi="31">
         <activity
-            android:name=".CustomListViewActivity"
-            android:exported="false" />
-        <activity
             android:name=".recyclerview.view.RecyclerViewActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".gridview.view.GridViewActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

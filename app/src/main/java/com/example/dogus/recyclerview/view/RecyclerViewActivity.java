@@ -9,8 +9,8 @@ import android.view.View;
 import com.example.dogus.R;
 import com.example.dogus.databinding.ActivityRecyclerViewBinding;
 import com.example.dogus.helper.message.ToastHelper;
-import com.example.dogus.recyclerview.adapter.Adapter;
-import com.example.dogus.recyclerview.adapter.AdapterVB;
+import com.example.dogus.recyclerview.adapter.RecyclerAdapter;
+//import com.example.dogus.recyclerview.adapter.RecyclerAdapterVB;
 import com.example.dogus.recyclerview.helper.OnItemClickListener;
 import com.example.dogus.recyclerview.model.Model;
 
@@ -20,8 +20,8 @@ public class RecyclerViewActivity extends AppCompatActivity implements OnItemCli
     ActivityRecyclerViewBinding binding;
     ArrayList<Model> modelArrayList = new ArrayList<>();
 
-    AdapterVB adapterVB;
-    Adapter adapter;
+    //RecyclerAdapterVB recyclerAdapterVB;
+    RecyclerAdapter recyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +41,10 @@ public class RecyclerViewActivity extends AppCompatActivity implements OnItemCli
 
         binding.recyclerview.setHasFixedSize(true);
         binding.recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        adapterVB = new AdapterVB(this, modelArrayList, this::onItemClick);
-        binding.recyclerview.setAdapter(adapterVB);
-        /*adapter = new Adapter(this, modelArrayList, this::onItemClick);
-        binding.recyclerview.setAdapter(adapter);*/
+        /*recyclerAdapterVB = new RecyclerAdapterVB(this, modelArrayList, this::onItemClick);
+        binding.recyclerview.setAdapter(recyclerAdapterVB);*/
+        recyclerAdapter = new RecyclerAdapter(this, modelArrayList, this::onItemClick);
+        binding.recyclerview.setAdapter(recyclerAdapter);
 
     }
 

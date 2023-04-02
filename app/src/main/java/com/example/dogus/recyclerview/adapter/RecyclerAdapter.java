@@ -16,14 +16,14 @@ import com.example.dogus.recyclerview.model.Model;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
 
     private Context context;
     private ArrayList<Model> modelArrayList;
 
     private OnItemClickListener onItemClickListener;
 
-    public Adapter(Context context, ArrayList<Model> modelArrayList, OnItemClickListener onItemClickListener) {
+    public RecyclerAdapter(Context context, ArrayList<Model> modelArrayList, OnItemClickListener onItemClickListener) {
         this.context = context;
         this.modelArrayList = modelArrayList;
         this.onItemClickListener = onItemClickListener;
@@ -32,7 +32,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recycler, parent, false);
         return new ViewHolder(view);
     }
 
